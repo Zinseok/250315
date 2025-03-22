@@ -1,0 +1,230 @@
+.banner-sect {
+    padding: 5rem;
+    position: relative;
+    margin-top: 30rem;
+}
+
+.banner-sect.active .txt-box .tit,
+.banner-sect.active .txt-box .desc,
+.banner-sect.active .txt-box .view-btn,
+.banner-sect.active .txt-box .txt,
+.banner-sect.active .txt-box .select {
+    opacity: 1;
+    transform: unset;
+}
+
+.banner-sect.active:before {
+    width: 0;
+}
+
+/*
+.banner-sect:before {
+    content: "";
+    width: calc(50% + 2px);
+    position: absolute;
+    left: 0px;
+    top: -2px;
+    height: calc(100% + 4px);
+    background-color: #FFF;
+    z-index: 7;
+    transition: width 1s var(--ease1);
+}
+*/
+
+.banner-sect .img {
+    position: relative;
+    width: 100%;
+    padding-top: 29%;
+    background-color: #000;
+    display: block;
+}
+
+.banner-sect .slide {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+}
+
+.banner-sect .slide .swiper-container {
+    height: 100%;
+}
+
+.swiper-container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: visible;
+    /* overflow: hidden; */
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+}
+
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+}
+
+.swiper-container-fade .swiper-slide {
+    pointer-events: none;
+    transition-property: opacity;
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+}
+ /*
+.banner-sect .slide .swiper-slide:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    background-color: rgba(0,0,0,0.3);
+}
+*/
+
+.swiper-container-fade .swiper-slide {
+    pointer-events: none;
+    transition-property: opacity;
+}
+
+.banner-sect .img img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+img {
+    max-width: 100%;
+}
+
+fieldset, img {
+    border: 0 none;
+    vertical-align: top;
+}
+
+.swiper-container .swiper-notification {
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    opacity: 0;
+    z-index: -1000;
+}
+
+.banner-sect .in {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: flex-start;
+    z-index: 5;
+    padding: 0 4rem;
+    pointer-events: none;
+}
+
+.in {
+    width: 164rem;
+    max-width: 100%;
+    padding: 0 2rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+.banner-sect .txt-box {
+    color: #fff;
+    pointer-events: auto;
+}
+
+.banner-sect .txt-box .desc {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: opacity 1s, transform 1s;
+}
+
+.banner-sect .txt-box .tit {
+    font-size: 8.5rem;
+    font-weight: 500;
+    line-height: 1;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: opacity 1s, transform 1s;
+}
+
+.en {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.banner-sect .txt-box .txt {
+    font-size: 16px;
+    margin-top: 3rem;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: opacity 1s, transform 1s;
+}
+
+.banner_sect .txt-box {
+    color: #fff;
+    pointer-events: auto;
+}
+
+.banner-sect .txt-box .view-btn {
+    margin-top: 4rem;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: opacity 1s, transform 1s;
+}
+
+.view-btn.wh {
+    border-color: #fff;
+}
+
+.view-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 17rem;
+    min-width: 120px;
+    height: 5rem;
+    padding: 0px 1em;
+    border: 1px solid #000;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.view-btn.wh .ico {
+    background-color: #FFF
+    ;
+}
+
+.view-btn .ico {
+    margin-right: 15px;
+    width: 1.3rem;
+    height: 2px;
+    background-color: #000;
+    transform: rotate(360deg);
+    transition: 0.3s ease-in-out;
+}

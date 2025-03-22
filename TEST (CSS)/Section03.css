@@ -1,0 +1,736 @@
+/************** Section03 **************/
+
+.scene-sect {
+    position: relative;
+    overflow: visible;
+    /* overflow: hidden; */
+    z-index: 12;
+    margin-top: 30rem;
+}
+
+.scene-sect .scene-cont {
+    height: 100vh;
+    color: #000;
+    transition: color .3s ease-in-out;
+    background-color: #212721;
+}
+
+.scene-sect .in {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    overflow: visible;
+    /* overflow: hidden; */
+    top: 30%;
+}
+
+.in {
+    width: 164rem;
+    max-width: 100%;
+    padding: 0 2rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+.scene-sect .cont {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .5s;
+    color: #fff;
+}
+
+.scene-sect.type1 .cont .left {
+    transform: translateX(50%);
+    opacity: 0;
+}
+
+.scene-sect.type1 .cont .en {
+    opacity: 0.05;
+}
+
+.scene-sect .cont .en {
+    font-size: 3.5rem;
+    opacity: 0.5;
+}
+
+.en {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.scene-sect.type1 .cont .tit {
+    opacity: 0.05;
+}
+
+.scene-sect .cont .tit {
+    margin-top: 30px;
+}
+
+.scene-sect .cont .tit,
+.sect-tit .tit {
+    font-size: 5rem;
+    line-height: 1;
+    font-weight: 600;
+    position: relative;
+}
+
+.scene-sect .cont .line {
+    flex: 0;
+    margin: 0;
+    height: 11.5rem;
+    position: relative;
+    opacity: 0;
+}
+
+.scene-sect.type1 .cont .line .before {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.scene-sect .cont .line .before {
+    position: absolute;
+    top: 50%;
+    width: 0;
+    height: 1px;
+    background: #fff;
+}
+
+.scene-sect.type1 .cont .right {
+    transform: translateX(-50%);
+    opacity: 0;
+    will-change: transform;  /* 요소가 곧 변경될 속성을 미리 브라우저에 알려줘서 최적화(퍼포먼스 향상) 하는 CSS 속성 */
+}
+
+.scene-sect.type1 .cont .en {
+    opacity: 0.05;
+}
+
+.scene-sect.type1 .cont .tit {
+    opacity: 0.05;
+}
+
+.scene-sect .cont .tit {
+    margin-top: 30px;
+}
+
+.scene-sect .start {
+    position: absolute;
+    top: 70%;
+    left: 0;
+    width: 100%;
+}
+
+.scene-sect .fixed-txt {
+    z-index: 15;
+}
+
+.fixed-txt {
+    position: fixed;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%,0%);
+    max-width: 100%;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.fixed-txt .in {
+    justify-content: flex-start;
+}
+
+.scene-sect .fixed-txt .sect-tit {
+    color: #fff;
+}
+
+.sect-tit .tit {
+    position: relative;
+    display: inline-block;
+}
+
+.fixed-txt .sect-tit {
+    color: #000;
+    z-index: 10;
+    background-color: transparent;
+    height: 18rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.sect-tit {
+    position: relative;
+    color: rgba(0,0,0,0.05);
+    transition: color 0.3s ease-in-out;
+}
+
+.fixed-txt .sect-tit .tit {
+    background: transparent;
+}
+
+.luxury-sect {
+    display: flex;
+    align-items: flex-start;
+    padding-left: 10rem;
+    margin-top: 30rem;
+}
+
+.luxury.active .sect-tit {
+    opacity: 1;
+}
+
+.luxury-sect .sect-tit {
+    margin-right: 25rem;
+    flex-shrink: 0;
+    position: sticky;
+    top: 6rem;
+    height: 70vh;
+    opacity: 1;
+    transition: opacity .5s;
+}
+
+.sect-tit .desc {
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.sect-tit .desc p {
+    overflow: visible;
+    /* overflow: hidden; */
+    display: flex;
+}
+
+.sect-tit .desc p  span {
+    transform: translateY(100%);
+    transition: transform 0.75s;
+    display: inline-block;
+}
+
+.sect-tit .desc + .tit {
+    margin-top: 30px;
+}
+
+.luxury-sect.active .img-cont {
+    opacity: 1;
+}
+
+.luxury-sect .img-cont .cont-box {
+    max-width: 140rem;
+    perspective: 1000px;
+    margin-top: 12rem;
+}
+
+.luxury-sect .img-cont {
+    flex: 1;
+    padding-top: 21rem;
+    padding-right: 20rem;
+    opacity: 1;
+    transition: opacity .5s;
+}
+
+.luxury-sect .img-cont .cont-box {
+    max-width: 140rem;
+    perspective: 1000px;
+    margin-top: 12rem;
+}
+
+.luxury-sect .img-cont .cont-box .cont {
+    transform-origin: top;
+}
+
+.luxury-sect .img-cont .img {
+    position: relative;
+    padding-top: 60%;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    width: 100%;
+}
+
+.luxury-sect .img-cont .img img {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 55;
+}
+
+img {
+    max-width: 100%;
+}
+
+.luxury-sect .img-cont .txt-box {
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+}
+
+fieldset, img {
+    border: 0 none;
+    vertical-align: top;
+}
+
+.luxury-sect .img-cont .txt-box {
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+}
+
+.luxury-sect .img-cont .txt-box .tit {
+    position: relative;
+    font-size: 4rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.luxury-sect .img-cont .txt-box .txt {
+    margin-left: 4rem;
+    font-size: 16px;
+}
+
+
+.luxury-sect .img-cont .img {
+    position: relative;
+    padding-top: 60%;
+    overflow: visible;
+    /* overflow: hidden; */
+    border-radius: 1.5rem;
+    width: 100%;
+}
+
+.luxury-sect .img-cont .img img {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 55;
+}
+
+.scene-sect.type2 .cont .left {
+    transform: translateX(0%);
+    opacity: 0;
+}
+
+.scene-sect .cont .en {
+    font-size: 3.5rem;
+    opacity: 0.5;
+}
+
+
+.scene-sect.type2 .cont .en {
+    opacity: 0.05;
+}
+
+.scene-sect.type2 .cont .tit {
+    opacity: 0.05;
+}
+
+.scene-sect.type2 .cont .line {
+    flex: 1;
+    opacity: 1;
+    margin: 0 10rem;
+}
+
+.scene-sect .cont .line {
+    flex: 0;
+    margin: 0;
+    height: 11.5rem;
+    position: relative;
+    opacity: 0;
+}
+
+.scene-sect.type2 .cont .line .before {
+    left: 0;
+}
+
+.scene-sect .cont .line .before {
+    position: absolute;
+    top: 50%;
+    width: 0;
+    height: 1px;
+    background: #fff;
+}
+
+.scene-sect.type2 .cont .right {
+    transform: translateX(-50%);
+    opacity: 0;
+}
+
+.scene-sect.type2 .cont .en {
+    opacity: 0.05;
+}
+
+.scene-sect .cont .tit {
+    margin-top: 30px;
+}
+
+.scene-sect .start {
+    position: absolute;
+    top: 70%;
+    left: 0;
+    width: 100%;
+}
+
+.fixed-txt.active {
+    opacity: 1;
+    /* opacity: 0.05; */
+}
+
+
+.scene-sect .fixed-txt.type2 .in {
+    justify-content: flex-end;
+}
+
+.fixed_txt.bk .sect_tit {
+    color: #000;
+}
+
+.en-txt-sect {
+    overflow: visible;
+    /* overflow: hidden; */
+    margin-top: 25rem;
+    color: #EEEEEE;
+    font-size: 6.75vw;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+.en-txt-sect p:nth-child(1) {
+    transform: translateX(-100%);
+}
+
+.en .en-txt-sect p {
+    position: relative;
+}
+
+.en .en-txt-sect p span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    font-size: 1em;
+    font-weight: inherit;
+    color: #000;
+    overflow: visible;
+    /* overflow: hidden; */
+    white-space: nowrap;
+}
+
+.en-txt-sect p:nth-child(2) {
+    transform: translateX(100%);
+}
+
+.en-txt-sect p:nth-child(3) {
+    transform: translateX(-100%);
+}
+
+.dyty-sect {
+    margin-top: 30rem;
+}
+
+.dyty-sect .in {
+    display: flex;
+    flex-direction: column;
+}
+
+.sect-tit.right {
+    display: inline-flex;
+    text-align: right;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: auto;
+}
+
+.sect-tit .desc p {
+    overflow: visible;
+    /* overflow: hidden; */
+    display: flex;
+}
+
+.sect_tit .tit span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 1em;
+    font-weight: inherit;
+    color: transparent;
+    overflow: visible;
+    /* overflow: hidden; */
+    white-space: nowrap;
+    transition: width 0.7s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.duty-sect .cont-box {
+    display: flex;
+    width: 100%;
+    margin-top: 8rem;
+}
+
+.duty-sect .cont-box .cont {
+    position: relative;
+    width: 50%;
+}
+
+.duty-sect .cont-box .cont .img {
+    position: relative;
+    padding-top: 100%;
+    display: block;
+}
+
+.duty-sect .cont-box .cont .img img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+.duty-sect .cont-box .cont .img .img-txt {
+    position: absolute;
+    left: 5rem;
+    bottom: 3rem;
+    font-size: 1.4em;
+    font-weight: 600;
+    /* transition: opacity 0.3s ease-in-out; */
+}
+
+.duty-sect .cont-box .cont .hover-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    padding: 0 6rem 8rem 8rem;
+    background-color: rgba(45,61,58,0.8);
+    color: #fff;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.duty-sect .cont-box .cont .hover-box .tit {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.duty-sect .cont-box .cont .hover-box .txt {
+    font-size: 16px;
+    margin-top: 3rem;
+}
+
+.duty-sect .cont-box .cont .hover-box .ico {
+    width: 4.5rem;
+    margin-top: 8rem;
+}
+
+.duty-sect .cont-box .cont .hover-box .ico svg {
+    fill: #fff;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+svg {
+    overflow: visible;
+}
+
+.duty-sect .cont-box .cont + .cont {
+    margin-left: 20px;
+}
+
+.duty-sect .cont-box .cont {
+    position: relative;
+    width: 50%;
+}
+
+.duty-sect .cont-box .cont .img {
+    position: relative;
+    padding-top: 100%;
+    display: block;
+}
+
+/* 시계 부분 */
+
+
+
+
+/*    */
+
+.main .time-sect .sect-bg.on {
+    pointer-events: visible;
+    opacity: 1;
+}
+
+.main .time-sect .picture-cont {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.main .time-sect .picture-cont .txt-cont {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateY(25%);
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    transition: color 0.3s ease-in-out;
+}
+
+.main .time-sect .picture-cont .txt-cont .cont {
+    position: relative;
+}
+
+/*
+.main .time-sect .picture-cont .txt-cont .cont::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #2D3D3A;
+    opacity: 0;
+    z-index: 2;
+}
+*/
+
+.main .time-sect .picture-cont .txt-cont .tit {
+    position: relative;
+    font-size: 6rem;
+    font-weight: 600;
+}
+
+.main .time-sect .picture-cont .txt-cont .txt {
+    position: relative;
+    margin-top: 6rem;
+    font-size: 2.5rem;
+}
+
+.main .time-sect .picture-cont .txt-cont .txt p {
+    font-size: 16px;
+    color: #809C96;
+}
+
+.main .time-sect .picture-cont .txt-cont .txt p + p {
+    margin-top: 2.5rem;
+}
+
+.main .time-sect .picture-cont .txt-cont .cont .bg {
+    display: block;
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    width: calc(100% + 4px);  /* 요소의 너비를 부모 요소의 100% 크기보다 4px 더 크게 설정하는 CSS 코드 */
+    height: 200%;
+    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(45,61,58,1) 100%);
+    z-index: 4;
+    opacity: 0;
+}
+
+.main .time-sect .picture-cont .img-cont {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200vh;
+    transform: translateY(150%);
+}
+
+.main .time-sect .picture-cont .img-cont .img.left {
+    width: 20%;
+    left: 10%;
+    top: 30%;
+    transform: translateY(-50%);
+}
+
+.main .time-sect .picture-cont .img-cont .img {
+    position: absolute;
+    overflow: visible;
+    /* overflow: hidden; */
+    padding-top: 5px;
+}
+
+/*
+.main .time-sect .picture-cont .img-cont .img:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #2D3D3A;
+    opacity: 0.2;
+    z-index: 2;
+}
+*/
+
+fieldset, img {
+    border: 0 none;
+    vertical-align: top;
+}
+
+.main .time-sect .picture-cont .img-cont .img .bg {
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    width: calc(100% + 4px);
+    height: 0%;
+    background: linear-gradient(180deg, rgba(45,61,58,1) 0%, rgba(45,61,58,0.9) 50%, rgba(45,61,58,0) 100%);
+    z-index: 4;
+}
+
+.main .time-sect .picture-cont .img-cont .img.right {
+    width: 25%;
+    right: 10%;
+    top: 0;
+}
+
+.main .time-sect .picture-cont .img-cont .img.center {
+    width: 20%;
+    left: 60%;
+    top: 45%;
+    transform: translateX(0%);
+}
+
+.main .time-sect .picture-cont .img-cont .img .bg {
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    width: calc(100% + 4px);
+    height: 0%;
+    background: linear-gradient(180deg, rgba(45,61,58,1) 0%, rgba(45,61,58,0.9) 50%, rgba(45,61,58,0) 100%);
+    z-index: 4;
+}

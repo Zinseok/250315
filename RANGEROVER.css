@@ -1,0 +1,1891 @@
+/************** Header **************/
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 1705px;
+    height: 76px;
+    z-index: 60;
+    color: #fff;
+    transition: background-color 0.3s ease-in-out , color 0.3s ease-in-out , top 0.3s ease-in-out;
+}
+
+
+.header.down {
+    background-color: #fff;
+    color: #000 !important;
+    box-shadow: 0 0 23px 5px rgba(0, 0, 0, 0.03);
+}
+
+.header .logo {
+    display: flex;
+    margin-left: 45px;
+}
+
+nav {
+    display: block;
+    unicode-bidi: isolate;
+}
+.header nav {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 100%;
+    transform: translate(-50%, 0%);
+    z-index: 1;
+}
+
+.header nav .menu {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.header nav .menu > li {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.header nav .menu > li > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0 3em;
+    width: 100%;
+    height: 100%;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: padding .3s;
+}
+
+.header .right-wrap {
+    margin-left: auto;
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+.header .right-wrap .global {
+    display: flex;
+    align-items: center;
+    margin-right: 4rem;
+    position: relative;
+    height: 100%;
+}
+
+.header .right-wrap .btn {
+    margin-left: 4rem;
+    display: none;
+}
+
+.header .right-wrap .btn svg {
+    width: 1rem;
+    height: 1rem;
+    fill: #fff;
+    transition: fill 0.3s ease-in-out;
+}
+
+svg {
+    overflow: visible;
+}
+
+.header .right-wrap .global .btn-txt {
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.header .right-wrap .global .btn-nav {
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    transform: translate(-50%,100%);
+    box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.1);
+    text-align: left;
+    z-index: 15;
+    background-color: #fff;
+    font-size: 14px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s;
+    color: #000;
+}
+
+.header .right-wrap .global .btn-nav li a {
+    padding: 6px 20px;
+    display: block;
+    white-space: nowrap;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.header .right-wrap .link-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 11em;
+    height: 3em;
+    border-radius: 100px;
+    background-color: rgba(255,255,255,0.2);
+    border: 1px solid transparent;
+    color: #fff;
+    font-size: 14px;
+    transition: color 0.3s ease-in-out , border-color 0.3s ease-in-out , background-color 0.3s ease-in-out;
+}
+
+.header .right-wrap .link-btn svg {
+    fill: #fff;
+    width: 0.9em;
+    margin-left: 1rem;
+    transition: fill 0.3s ease-in-out;
+}
+
+
+
+/************** Section01 **************/
+
+.page-wrap {
+    display: flex;
+    flex-direction: column;  /* Flexbox에서 아이템의 배치 방향을 세로(위→아래)로 설정하는 속성 */
+    min-height: 100vh;
+}
+
+.pagr-wrap .container {
+    flex: 1;
+    flex-grow: 1;  /* 컨테이너에서 남은 공간을 아이템들이 어떻게 나눠 가질지 결정하는 속성 */
+    flex-shrink: 1;  /* Flex 컨테이너 안에서 아이템이 줄어들 때, 얼마나 줄어들 수 있는지를 결정 */
+    flex-basis: 0%;  /* Flexbox에서 아이템의 기본 크기를 0으로 설정하는 속성 */
+}
+
+.video-sect {
+    position: relative;
+    width: 100%;
+    background-color: #000;
+    margin-top: -2px;
+    z-index: 55;
+    overflow: hidden;
+}
+
+.swiper-container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+}
+
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+}
+
+.video-sect .swiper-slide {
+    height: calc(4px + 100vh);  /* 브라우저의 화면 높이(100vh)에 4픽셀을 더한 높이를 의미함 */
+}
+
+.swiper-slide-fade .swiper-slide {
+    pointer-events: none;
+    transition-property: opacity;  /* CSS에서 어떤 속성에 대해 트랜지션(변화 효과) 을 적용할지를 지정하는 코드 opacity : 값이 변할 때 부드럽게 변화하도록 설정 */
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition-property: transform;  /* transform : 속성이 변경될 때 부드러운 애니메이션 효과를 적용 */
+}
+
+.video-sect .video-txt {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: 2;
+}
+
+.video-sect .video-txt .in {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  /* 교차 축(Cross Axis) 방향으로 왼쪽 정렬하는 속성 */
+    justify-content: center;
+    height: 100%;
+}
+
+.video-sect .video-txt .tit {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.video-sect .video-txt p {
+    overflow: hidden;
+}
+
+.video-sect .video-txt p span {
+    transform: translateY(100%);
+    display: block;
+    transition: transform 1s ease-in-out;
+}
+
+.video-sect .video-txt .txt {
+    font-size: 40px;
+    font-weight: 500;
+    margin-top: 4rem;
+}
+
+.video-sect .img {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+}
+
+.video-sect .img video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.video-sect .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.video-sect .slide-move {
+    position: absolute;
+    width: 100%;
+    bottom: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 20;
+    color: rgb(255, 255, 255);
+    max-width: 100%;
+}
+
+.video-sect .slide-move .swiper-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+    position: static;
+}
+
+.swiper-pagination {
+    position: absolute;
+    text-align: center;
+    transition: .3s opacity;
+    transform: translate3d(0, 0, 0);
+    z-index: 10;
+}
+
+.swiper-pagination-fraction {
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+}
+
+.video-sect .swiper-progress-bar {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 30rem;
+    height: 2px;
+}
+
+.video-sect .swiper-progress-bar .slide-progress-bar .bg {
+    opacity: 0.2;
+    background: rgb(255, 255, 255);
+}
+
+.video-sect .swiper-progress-bar.animate .slide-progress-bar.loading {
+    left: 0px;
+    right: auto;
+    height: 100%;
+    width: 0px;
+    background: rgb(255, 255, 255);
+    transition: width linear 0.1s;
+}
+
+.video-sect .slide-move .swiper-pagination .num-box {
+    font-size: 16px;
+    width: 4em;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: 20px;
+}
+
+.video-sect .slide-move .swiper-pagination-current {
+    min-width: 0.7em;
+}
+
+.video-sect .slide-move .swiper-pagination .num-box span {
+    line-height: 1;
+}
+
+.video-sect .slide-move .swiper-pagination .num-box .slash {
+    font-weight: 300;
+    font-size: 1.8rem;
+    opacity: 0.6;
+    margin: 0px 7px;
+}
+
+.video-sect .slide-move .swiper-pagination .num-box .swiper-pagination-total {
+    opacity: 0.6;
+}
+
+.video-sect .slide-move .swiper-pagination .btn {
+    width: 16px;
+    height: 16px;
+    margin-left: 20px;
+    display: inline-block;
+    position: relative;
+}
+
+.video-sect .slide-move .swiper-pagination .btn svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1rem;
+    fill: rgb(255, 255, 255);
+}
+
+g {
+    transform: translate(-192, -1560.13);
+}
+
+svg {
+    overflow: visible;
+}
+
+.video-sect .slide-move .swiper-pagination .btn svg.play {
+    display: none;
+}
+
+.video-sect .slide-move .swiper-pagination .btn svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1rem;
+    fill: rgb(255, 255, 255);
+}
+
+svg {
+    overflow: visible;
+}
+
+.video-sect .slide-move .arr {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 13px;
+    fill: rgb(255, 255, 255);
+    z-index: 10;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.video-sect .slide-move .arr .swiper-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 6rem;
+}
+
+.video-sect .slide-move .arr .swiper-btn svg .cls-2 {
+    fill: none;
+    stroke: rgb(255, 255, 255);
+    stroke-miterlimit: 10;
+    stroke-width: 10px;
+    transition: stroke 0.3s;
+}
+
+.video-sect .slide-move .arr .swiper-btn + .swiper-btn {
+    margin-left: 13px;
+}
+
+.scroll-animation {
+    position: absolute;
+    bottom: 0px;
+    right: 10rem;
+    height: 180px;
+    color: rgb(255, 255, 255);
+    z-index: 70;
+    transform: translateX(-50%);
+}
+
+.scroll-animation > span {
+    display: block;
+    transform: rotate(90deg);
+    font-size: 14px;
+}
+
+.scroll-animation > .bg {
+    position: relative;
+    height: 100%;
+    width: 1px;
+    margin: 30px auto 0px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.scroll-animation > .bg .animation {
+    width: 100%;
+    animation-name: updown;
+    animation-iteration-count: infinite;  /* CSS에서 애니메이션을 무한 반복하도록 설정하는 속성 */
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    background: rgb(255, 255, 255);
+}
+
+
+
+/************** Section02 **************/
+
+.main .txt-sect {
+    padding-top: 30rem;
+    text-align: center;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.in {
+    width: 164rem;
+    max-width: 100%;
+    padding: 0 2rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+.main .txt-sect .desc {
+    font-size: 4.5rem;
+    opacity: 0;
+}
+
+.en {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.main .txt-sect .desc span {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.main .txt-sect .tit {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-top: 4rem;
+    line-height: 1.4;
+}
+
+.main .txt-sect .tit p {
+    overflow: visible;
+    /* overflow: hidden; */
+}
+
+.main .txt-sect .tit p span {
+    display: inline-block;
+    transform: translateY(100%);
+    transition: transform 0.5s ease-in-out;
+    min-width: 0.25em;
+}
+
+.main .txt-sect .txt {
+    font-size: 2.4rem;
+    margin-top: 3.5rem;
+    overflow: visible;
+    /* overflow: hidden; */
+}
+
+/*
+.main .txt-sect .txt span {
+    transform: unset;  /* CSS에서 transform 속성을 초기화하는 역할
+}
+*/
+
+.main .txt-sect .txt span {
+    display: inline-block;
+    transform: translateY(100%);
+    transition: transform 0.75s;
+    min-width: 0.3em;
+    transition-delay: 1.2s;
+}
+
+.info-sect {
+    margin-top: 30rem;
+}
+
+.info-sect .in {
+    width: 144rem;
+}
+
+.info-sect .cont-box {
+    /* width: 1330px;
+    height: 786.3px;
+    padding: 19px;
+    margin: 0 auto; */
+    display: flex;
+    align-items: flex-end;
+}
+
+.info-sect .cont-box .cont {
+    flex: 1;
+}
+
+.info-sect .cont-box .cont .box {
+    transition: transform 0.6s cubic-bezier(0, 0, 0.49, 1.01);  /* 애니메이션 속도 곡선을 정의하는 큐빅 베지어 함수 */
+}
+
+.info-sect .cont-box .cont .box .desc {
+    /* overflow: hidden; */
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.info_sect .cont_box .cont .txt_box .tit span,
+.info_sect .cont_box .cont .txt_box .desc span {
+    display: block;
+    transform: translateY(100%);
+    transition: transform 1s;
+}
+
+.info-sect .cont-box .cont .txt-box .tit {
+    overflow: visible;
+    /* overflow: hidden; */
+    font-size: 4.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-top: 10px;
+}
+
+.en {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.info-sect .cont-box .cont .img {
+    /* width: 380px;
+    height: 494px; */
+    position: relative;
+    padding-top: 130%;
+    margin-top: 20px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.info-sect.active .cont-box .cont .img:before {
+    width: 0%;
+}
+
+.info-sect .cont-box .cont .img::before {
+    /* content: ""; */
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: #fff;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: 2;
+    transition: width 1s  0.4s , background-color 0.3s ease-in-out;
+}
+
+.info-sect .cont-box .cont .img img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.info-sect .cont-box .cont + .cont {
+    margin-left: 10rem;
+}
+
+.info-sect .cont-box .cont.center {
+    margin-bottom: 20rem;
+}
+
+/*
+.RR-pointer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.RR-pointer .pointer-box {
+    overflow: hidden;
+    position: relative;
+    width: 16rem;
+    height: 16rem;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    background-color: rgb(81 91 64 / 80%);
+    backdrop-filter: blur(6px);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.RR-pointer .pointer-box .bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.1);
+}
+
+.RR-pointer .pointer-box .txt {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+*/
+
+/************** Section03 **************/
+
+.scene-sect {
+    position: relative;
+    overflow: visible;
+    /* overflow: hidden; */
+    z-index: 12;
+    margin-top: 30rem;
+}
+
+.scene-sect .scene-cont {
+    height: 100vh;
+    color: #000;
+    transition: color .3s ease-in-out;
+    background-color: #212721;
+}
+
+.scene-sect .in {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    overflow: visible;
+    /* overflow: hidden; */
+    top: 30%;
+}
+
+.in {
+    width: 164rem;
+    max-width: 100%;
+    padding: 0 2rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+.scene-sect .cont {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .5s;
+    color: #fff;
+}
+
+.scene-sect.type1 .cont .left {
+    transform: translateX(50%);
+    opacity: 0;
+}
+
+.scene-sect.type1 .cont .en {
+    opacity: 0.05;
+}
+
+.scene-sect .cont .en {
+    font-size: 3.5rem;
+    opacity: 0.5;
+}
+
+.en {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.scene-sect.type1 .cont .tit {
+    opacity: 0.05;
+}
+
+.scene-sect .cont .tit {
+    margin-top: 30px;
+}
+
+.scene-sect .cont .tit,
+.sect-tit .tit {
+    font-size: 5rem;
+    line-height: 1;
+    font-weight: 600;
+    position: relative;
+}
+
+.scene-sect .cont .line {
+    flex: 0;
+    margin: 0;
+    height: 11.5rem;
+    position: relative;
+    opacity: 0;
+}
+
+.scene-sect.type1 .cont .line .before {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.scene-sect .cont .line .before {
+    position: absolute;
+    top: 50%;
+    width: 0;
+    height: 1px;
+    background: #fff;
+}
+
+.scene-sect.type1 .cont .right {
+    transform: translateX(-50%);
+    opacity: 0;
+    will-change: transform;  /* 요소가 곧 변경될 속성을 미리 브라우저에 알려줘서 최적화(퍼포먼스 향상) 하는 CSS 속성 */
+}
+
+.scene-sect.type1 .cont .en {
+    opacity: 0.05;
+}
+
+.scene-sect.type1 .cont .tit {
+    opacity: 0.05;
+}
+
+.scene-sect .cont .tit {
+    margin-top: 30px;
+}
+
+.scene-sect .start {
+    position: absolute;
+    top: 70%;
+    left: 0;
+    width: 100%;
+}
+
+.scene-sect .fixed-txt {
+    z-index: 15;
+}
+
+.fixed-txt {
+    position: fixed;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%,0%);
+    max-width: 100%;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.fixed-txt .in {
+    justify-content: flex-start;
+}
+
+.scene-sect .fixed-txt .sect-tit {
+    color: #fff;
+}
+
+.sect-tit .tit {
+    position: relative;
+    display: inline-block;
+}
+
+.fixed-txt .sect-tit {
+    color: #000;
+    z-index: 10;
+    background-color: transparent;
+    height: 18rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.sect-tit {
+    position: relative;
+    color: rgba(0,0,0,0.05);
+    transition: color 0.3s ease-in-out;
+}
+
+.fixed-txt .sect-tit .tit {
+    background: transparent;
+}
+
+.luxury-sect {
+    display: flex;
+    align-items: flex-start;
+    padding-left: 10rem;
+    margin-top: 30rem;
+}
+
+.luxury.active .sect-tit {
+    opacity: 1;
+}
+
+.luxury-sect .sect-tit {
+    margin-right: 25rem;
+    flex-shrink: 0;
+    position: sticky;
+    top: 6rem;
+    height: 70vh;
+    opacity: 1;
+    transition: opacity .5s;
+}
+
+.sect-tit .desc {
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.sect-tit .desc p {
+    overflow: visible;
+    /* overflow: hidden; */
+    display: flex;
+}
+
+.sect-tit .desc p  span {
+    transform: translateY(100%);
+    transition: transform 0.75s;
+    display: inline-block;
+}
+
+.sect-tit .desc + .tit {
+    margin-top: 30px;
+}
+
+.luxury-sect.active .img-cont {
+    opacity: 1;
+}
+
+.luxury-sect .img-cont .cont-box {
+    max-width: 140rem;
+    perspective: 1000px;
+    margin-top: 12rem;
+}
+
+.luxury-sect .img-cont {
+    flex: 1;
+    padding-top: 21rem;
+    padding-right: 20rem;
+    opacity: 1;
+    transition: opacity .5s;
+}
+
+.luxury-sect .img-cont .cont-box {
+    max-width: 140rem;
+    perspective: 1000px;
+    margin-top: 12rem;
+}
+
+.luxury-sect .img-cont .cont-box .cont {
+    transform-origin: top;
+}
+
+.luxury-sect .img-cont .img {
+    position: relative;
+    padding-top: 60%;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    width: 100%;
+}
+
+.luxury-sect .img-cont .img img {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 55;
+}
+
+img {
+    max-width: 100%;
+}
+
+.luxury-sect .img-cont .txt-box {
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+}
+
+fieldset, img {
+    border: 0 none;
+    vertical-align: top;
+}
+
+.luxury-sect .img-cont .txt-box {
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+}
+
+.luxury-sect .img-cont .txt-box .tit {
+    position: relative;
+    font-size: 2.5rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.luxury-sect .img-cont .txt-box .txt {
+    margin-left: 4rem;
+    font-size: 16px;
+}
+
+
+.luxury-sect .img-cont .img {
+    position: relative;
+    padding-top: 60%;
+    overflow: visible;
+    /* overflow: hidden; */
+    border-radius: 1.5rem;
+    width: 100%;
+}
+
+.luxury-sect .img-cont .img img {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 55;
+}
+
+.scene-sect.type2 .cont .left {
+    transform: translateX(0%);
+    opacity: 0;
+}
+
+.scene-sect .cont .en {
+    font-size: 3.5rem;
+    opacity: 0.5;
+}
+
+
+.scene-sect.type2 .cont .en {
+    opacity: 0.05;
+}
+
+.scene-sect.type2 .cont .tit {
+    opacity: 0.05;
+}
+
+.scene-sect.type2 .cont .line {
+    flex: 1;
+    opacity: 1;
+    margin: 0 10rem;
+}
+
+.scene-sect .cont .line {
+    flex: 0;
+    margin: 0;
+    height: 11.5rem;
+    position: relative;
+    opacity: 0;
+}
+
+.scene-sect.type2 .cont .line .before {
+    left: 0;
+}
+
+.scene-sect .cont .line .before {
+    position: absolute;
+    top: 50%;
+    width: 0;
+    height: 1px;
+    background: #fff;
+}
+
+.scene-sect.type2 .cont .right {
+    transform: translateX(-50%);
+    opacity: 0;
+}
+
+.scene-sect.type2 .cont .en {
+    opacity: 0.05;
+}
+
+.scene-sect .cont .tit {
+    margin-top: 30px;
+}
+
+.scene-sect .start {
+    position: absolute;
+    top: 70%;
+    left: 0;
+    width: 100%;
+}
+
+.fixed-txt.active {
+    opacity: 1;
+    /* opacity: 0.05; */
+}
+
+
+.scene-sect .fixed-txt.type2 .in {
+    justify-content: flex-end;
+}
+
+.fixed_txt.bk .sect_tit {
+    color: #000;
+}
+
+.en-txt-sect {
+    overflow: visible;
+    /* overflow: hidden; */
+    margin-top: 25rem;
+    color: #EEEEEE;
+    font-size: 6.75vw;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+/*
+.en-txt-sect p:nth-child(1) {
+    transform: translateX(-100%);
+}
+*/
+
+.en .en-txt-sect p {
+    position: relative;
+}
+
+.en .en-txt-sect p span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    font-size: 1em;
+    font-weight: inherit;
+    color: #000;
+    overflow: visible;
+    /* overflow: hidden; */
+    white-space: nowrap;
+}
+
+/*
+.en-txt-sect p:nth-child(2) {
+    transform: translateX(100%);
+}
+
+.en-txt-sect p:nth-child(3) {
+    transform: translateX(-100%);
+}
+*/
+
+.duty-sect {
+    margin-top: 30rem;
+}
+
+.duty-sect .in {
+    display: flex;
+    flex-direction: column;
+}
+
+.sect-tit.right {
+    display: inline-flex;
+    text-align: right;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: auto;
+}
+
+.sect-tit .desc p {
+    overflow: visible;
+    /* overflow: hidden; */
+    display: flex;
+}
+
+.sect_tit .tit span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 1em;
+    font-weight: inherit;
+    color: transparent;
+    overflow: visible;
+    /* overflow: hidden; */
+    white-space: nowrap;
+    transition: width 0.7s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.duty-sect .cont-box {
+    display: flex;
+    width: 100%;
+    margin-top: 8rem;
+}
+
+.duty-sect .cont-box .cont {
+    position: relative;
+    width: 50%;
+}
+
+.duty-sect .cont-box .cont .img {
+    position: relative;
+    padding-top: 100%;
+    display: block;
+}
+
+.duty-sect .cont-box .cont .img img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+.duty-sect .cont-box .cont .img .img-txt {
+    position: absolute;
+    left: 5rem;
+    bottom: 3rem;
+    font-size: 1.4em;
+    font-weight: 600;
+    /* transition: opacity 0.3s ease-in-out; */
+}
+
+.duty-sect .cont-box .cont .hover-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    padding: 0 6rem 8rem 8rem;
+    background-color: rgba(45,61,58,0.8);
+    color: #fff;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.duty-sect .cont-box .cont .hover-box .tit {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.duty-sect .cont-box .cont .hover-box .txt {
+    font-size: 16px;
+    margin-top: 3rem;
+}
+
+.duty-sect .cont-box .cont .hover-box .ico {
+    width: 4.5rem;
+    margin-top: 8rem;
+}
+
+.duty-sect .cont-box .cont .hover-box .ico svg {
+    fill: #fff;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+svg {
+    overflow: visible;
+}
+
+.duty-sect .cont-box .cont + .cont {
+    margin-left: 20px;
+}
+
+.duty-sect .cont-box .cont {
+    position: relative;
+    width: 50%;
+}
+
+.duty-sect .cont-box .cont .img {
+    position: relative;
+    padding-top: 100%;
+    display: block;
+}
+
+/* 시계 부분 */
+
+
+
+
+/*    */
+
+.main .time-sect .sect-bg.on {
+    pointer-events: visible;
+    opacity: 1;
+}
+
+.main .time-sect .picture-cont {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.main .time-sect .picture-cont .txt-cont {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateY(25%);
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    transition: color 0.3s ease-in-out;
+}
+
+.main .time-sect .picture-cont .txt-cont .cont {
+    position: relative;
+}
+
+/*
+.main .time-sect .picture-cont .txt-cont .cont::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #2D3D3A;
+    opacity: 0;
+    z-index: 2;
+}
+*/
+
+.main .time-sect .picture-cont .txt-cont .tit {
+    position: relative;
+    font-size: 6rem;
+    font-weight: 600;
+}
+
+.main .time-sect .picture-cont .txt-cont .txt {
+    position: relative;
+    margin-top: 6rem;
+    font-size: 2.5rem;
+}
+
+.main .time-sect .picture-cont .txt-cont .txt p {
+    font-size: 16px;
+    color: #809C96;
+}
+
+.main .time-sect .picture-cont .txt-cont .txt p + p {
+    margin-top: 2.5rem;
+}
+
+.main .time-sect .picture-cont .txt-cont .cont .bg {
+    display: block;
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    width: calc(100% + 4px);  /* 요소의 너비를 부모 요소의 100% 크기보다 4px 더 크게 설정하는 CSS 코드 */
+    height: 200%;
+    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(45,61,58,1) 100%);
+    z-index: 4;
+    opacity: 0;
+}
+
+.main .time-sect .picture-cont .img-cont {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200vh;
+    transform: translateY(150%);
+}
+
+.main .time-sect .picture-cont .img-cont .img.left {
+    width: 20%;
+    left: 10%;
+    top: 30%;
+    transform: translateY(-50%);
+}
+
+.main .time-sect .picture-cont .img-cont .img {
+    position: absolute;
+    overflow: visible;
+    /* overflow: hidden; */
+    padding-top: 5px;
+}
+
+/*
+.main .time-sect .picture-cont .img-cont .img:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #2D3D3A;
+    opacity: 0.2;
+    z-index: 2;
+}
+*/
+
+fieldset, img {
+    border: 0 none;
+    vertical-align: top;
+}
+
+.main .time-sect .picture-cont .img-cont .img .bg {
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    width: calc(100% + 4px);
+    height: 0%;
+    background: linear-gradient(180deg, rgba(45,61,58,1) 0%, rgba(45,61,58,0.9) 50%, rgba(45,61,58,0) 100%);
+    z-index: 4;
+}
+
+.main .time-sect .picture-cont .img-cont .img.right {
+    width: 25%;
+    right: 10%;
+    top: 0;
+}
+
+.main .time-sect .picture-cont .img-cont .img.center {
+    width: 20%;
+    left: 60%;
+    top: 45%;
+    transform: translateX(0%);
+}
+
+.main .time-sect .picture-cont .img-cont .img .bg {
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    width: calc(100% + 4px);
+    height: 0%;
+    background: linear-gradient(180deg, rgba(45,61,58,1) 0%, rgba(45,61,58,0.9) 50%, rgba(45,61,58,0) 100%);
+    z-index: 4;
+}
+
+
+
+/************** Section04 **************/
+
+.banner-sect {
+    padding: 5rem;
+    position: relative;
+    margin-top: 30rem;
+}
+
+.banner-sect.active .txt-box .tit,
+.banner-sect.active .txt-box .desc,
+.banner-sect.active .txt-box .view-btn,
+.banner-sect.active .txt-box .txt,
+.banner-sect.active .txt-box .select {
+    opacity: 1;
+    transform: unset;
+}
+
+.banner-sect.active:before {
+    width: 0;
+}
+
+/*
+.banner-sect:before {
+    content: "";
+    width: calc(50% + 2px);
+    position: absolute;
+    left: 0px;
+    top: -2px;
+    height: calc(100% + 4px);
+    background-color: #FFF;
+    z-index: 7;
+    transition: width 1s var(--ease1);
+}
+*/
+
+.banner-sect .img {
+    position: relative;
+    width: 100%;
+    padding-top: 29%;
+    background-color: #000;
+    display: block;
+}
+
+.banner-sect .slide {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+}
+
+.banner-sect .slide .swiper-container {
+    height: 100%;
+}
+
+.swiper-container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: visible;
+    /* overflow: hidden; */
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+}
+
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+}
+
+.swiper-container-fade .swiper-slide {
+    pointer-events: none;
+    transition-property: opacity;
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+}
+ /*
+.banner-sect .slide .swiper-slide:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    background-color: rgba(0,0,0,0.3);
+}
+*/
+
+.swiper-container-fade .swiper-slide {
+    pointer-events: none;
+    transition-property: opacity;
+}
+
+.banner-sect .img img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+img {
+    max-width: 100%;
+}
+
+fieldset, img {
+    border: 0 none;
+    vertical-align: top;
+}
+
+.swiper-container .swiper-notification {
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    opacity: 0;
+    z-index: -1000;
+}
+
+.banner-sect .in {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: flex-start;
+    z-index: 5;
+    padding: 0 4rem;
+    pointer-events: none;
+}
+
+.in {
+    width: 164rem;
+    max-width: 100%;
+    padding: 0 2rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+.banner-sect .txt-box {
+    color: #fff;
+    pointer-events: auto;
+}
+
+.banner-sect .txt-box .desc {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: opacity 1s, transform 1s;
+}
+
+.banner-sect .txt-box .tit {
+    font-size: 8.5rem;
+    font-weight: 500;
+    line-height: 1;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: opacity 1s, transform 1s;
+}
+
+.en {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.banner-sect .txt-box .txt {
+    font-size: 16px;
+    margin-top: 3rem;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: opacity 1s, transform 1s;
+}
+
+.banner_sect .txt-box {
+    color: #fff;
+    pointer-events: auto;
+}
+
+.banner-sect .txt-box .view-btn {
+    margin-top: 4rem;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: opacity 1s, transform 1s;
+}
+
+.view-btn.wh {
+    border-color: #fff;
+}
+
+.view-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 17rem;
+    min-width: 120px;
+    height: 5rem;
+    padding: 0px 1em;
+    border: 1px solid #000;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.view-btn.wh .ico {
+    background-color: #FFF
+    ;
+}
+
+.view-btn .ico {
+    margin-right: 15px;
+    width: 1.3rem;
+    height: 2px;
+    background-color: #000;
+    transform: rotate(360deg);
+    transition: 0.3s ease-in-out;
+}
+
+
+/************** Section05 **************/
+
+.car-sect .tit-sect {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.car-sect .tit-sect .txt {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+.car-sect .tit-sect .txt span {
+    opacity: 1;
+    /* opacity: 0; */
+}
+
+.car-sect .img-card-sect {
+    position: relative;
+    height: 100vh;
+    opacity: 1;
+    z-index: 5;
+    overflow: hidden;
+    overflow: visible;
+    /* overflow: hidden; */
+}
+
+.car-sect .img-card-sect .img-box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*
+.car-sect .img-card-sect .img-box::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 2;
+}
+*/
+
+.car-sect .img-card-sect .img-box .img {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.car-sect .img-card-sect .img-box .img img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.car-sect .img-card_sect .img-box .img.back {
+    opacity: 0;
+}
+
+.car-sect .img-card-sect .txt-wrap {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: #fff;
+    z-index: 5;
+}
+
+.car-sect .img-card-sect .txt-wrap .txt-box.left {
+    left: 0;
+}
+
+.car-sect .img-card-sect .txt-wrap .txt-box {
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    width: 50%;
+    text-align: center;
+}
+
+ /*
+.car-sect .img-card-sect .txt-wrap .txt-box.on:before {
+    opacity: 1;
+}
+*/
+
+/*
+.car-sect .img-card-sect .txt-wrap .txt-box.left:before {
+    left: 0;
+}
+*/
+
+/*
+.car-sect .img-card-sect .txt-wrap .txt-box:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.4);
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+*/
+
+.car-sect .img-card-sect .txt-wrap .txt-box .en-tit {
+    font-size: 2rem;
+    z-index: 3;
+    position: relative;
+}
+
+.en {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.car-sect .img-card-sect .txt-wrap .txt-box .tit {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-top: 4rem;
+    z-index: 3;
+    position: relative;
+}
+
+.car-sect .img-card-sect .txt-wrap .txt-box .txt {
+    font-size: 16px;
+    margin-top: 1rem;
+    z-index: 3;
+    position: relative;
+}
+
+.sm-mo-only {
+    display: none !important;  /* !important는 우선순위를 가장 높게 설정하여, 다른 CSS 규칙들이 덮어쓰지 못하도록 강제함! */
+}
+
+.car-sect .img-card-sect .txt-wrap .txt-box.on .view-btn {
+    opacity: 1;
+    pointer-events: visible;
+}
+
+.car-sect .img-card-sect .txt-wrap .txt-box .view-btn {
+    position: absolute;
+    left: 50%;
+    bottom: -10rem;
+    transform: translate(-50%,100%);
+    opacity: 0;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.view-btn.wh {
+    border-color: #fff;
+}
+
+.view-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 17rem;
+    min-width: 120px;
+    height: 5rem;
+    padding: 0px 1em;
+    border: 1px solid #000;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.view-btn.wh .ico {
+    background-color: #fff;
+}
+
+.view-btn .ico {
+    margin-right: 15px;
+    width: 1.3rem;
+    height: 2px;
+    background-color: #000;
+    transform: rotate(360deg);
+    transition: 0.3s ease-in-out;
+}
+
+.car-sect .img-card-sect .txt-wrap .plus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 3;
+    width: 4rem;
+}
+
+.car-sect .img-card-sect .txt-wrap .plus svg {
+    fill: #fff;
+}
+
+svg {
+    overflow: visible;
+}
+
+.car-sect .img-card-sect .txt-wrap .txt-box.right {
+    right: 0;
+}
+
+.car-sect .img-card-sect .txt-wrap .txt-box.right::before {
+    right: 0;
+}
+
+.car-sect .img-card-sect .txt-wrap .txt-box.right:before {
+    right: 0;
+}
+

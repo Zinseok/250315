@@ -1,0 +1,204 @@
+/************** Section02 **************/
+
+.main .txt-sect {
+    padding-top: 30rem;
+    text-align: center;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.in {
+    width: 164rem;
+    max-width: 100%;
+    padding: 0 2rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+.main .txt-sect .desc {
+    font-size: 4.5rem;
+    opacity: 0;
+}
+
+.en {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.main .txt-sect .desc span {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.main .txt-sect .tit {
+    font-size: 8rem;
+    font-weight: 700;
+    margin-top: 4rem;
+    line-height: 1.4;
+}
+
+.main .txt-sect .tit p {
+    overflow: visible;
+    /* overflow: hidden; */
+}
+
+.main .txt-sect .tit p span {
+    display: inline-block;
+    transform: translateY(100%);
+    transition: transform 0.5s ease-in-out;
+    min-width: 0.25em;
+}
+
+.main .txt-sect .txt {
+    font-size: 2.4rem;
+    margin-top: 3.5rem;
+    overflow: visible;
+    /* overflow: hidden; */
+}
+
+.main .txt-sect .txt span {
+    /* transform: unset; */  /* CSS에서 transform 속성을 초기화하는 역할 */
+}
+
+.main .txt-sect .txt span {
+    display: inline-block;
+    transform: translateY(100%);
+    transition: transform 0.75s;
+    min-width: 0.3em;
+    transition-delay: 1.2s;
+}
+
+.info-sect {
+    margin-top: 30rem;
+}
+
+.info-sect .in {
+    width: 144rem;
+}
+
+.info-sect .cont-box {
+    /* width: 1330px;
+    height: 786.3px;
+    padding: 19px;
+    margin: 0 auto; */
+    display: flex;
+    align-items: flex-end;
+}
+
+.info-sect .cont-box .cont {
+    flex: 1;
+}
+
+.info-sect .cont-box .cont .box {
+    transition: transform 0.6s cubic-bezier(0, 0, 0.49, 1.01);  /* 애니메이션 속도 곡선을 정의하는 큐빅 베지어 함수 */
+}
+
+.info-sect .cont-box .cont .box .desc {
+    overflow: visible;
+    /* overflow: hidden; */
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.info_sect .cont_box .cont .txt_box .tit span,
+.info_sect .cont_box .cont .txt_box .desc span {
+    display: block;
+    transform: translateY(100%);
+    transition: transform 1s;
+}
+
+.info-sect .cont-box .cont .txt-box .tit {
+    overflow: visible;
+    /* overflow: hidden; */
+    font-size: 4.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-top: 10px;
+}
+
+.en {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.info-sect .cont-box .cont .img {
+    /* width: 380px;
+    height: 494px; */
+    position: relative;
+    padding-top: 130%;
+    margin-top: 20px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.info-sect.active .cont-box .cont .img:before {
+    width: 0%;
+}
+
+.info-sect .cont-box .cont .img::before {
+    /* content: ""; */
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: #fff;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: 2;
+    transition: width 1s  0.4s , background-color 0.3s ease-in-out;
+}
+
+.info-sect .cont-box .cont .img img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.info-sect .cont-box .cont + .cont {
+    margin-left: 10rem;
+}
+
+.info-sect .cont-box .cont.center {
+    margin-bottom: 20rem;
+}
+
+.RR-pointer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.RR-pointer .pointer-box {
+    overflow: visible;
+    /* overflow: hidden; */
+    position: relative;
+    width: 16rem;
+    height: 16rem;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    background-color: rgb(81 91 64 / 80%);
+    backdrop-filter: blur(6px);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.RR-pointer .pointer-box .bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.1);
+}
+
+.RR-pointer .pointer-box .txt {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+}

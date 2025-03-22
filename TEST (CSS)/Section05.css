@@ -1,0 +1,236 @@
+/************** Section05 **************/
+
+.car-sect .tit-sect {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.car-sect .tit-sect .txt {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    font-size: 5rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+.car-sect .tit-sect .txt span {
+    opacity: 1;
+    /* opacity: 0; */
+}
+
+.car-sect .img-card-sect {
+    position: relative;
+    height: 100vh;
+    opacity: 1;
+    z-index: 5;
+    overflow: hidden;
+    overflow: visible;
+    /* overflow: hidden; */
+}
+
+.car-sect .img-card-sect .img-box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*
+.car-sect .img-card-sect .img-box::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 2;
+}
+*/
+
+.car-sect .img-card-sect .img-box .img {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.car-sect .img-card-sect .img-box .img img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.car-sect .img-card_sect .img-box .img.back {
+    opacity: 0;
+}
+
+.car-sect .img-card-sect .txt-wrap {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: #fff;
+    z-index: 5;
+}
+
+.car-sect .img-card-sect .txt-wrap .txt-box.left {
+    left: 0;
+}
+
+.car-sect .img-card-sect .txt-wrap .txt-box {
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    width: 50%;
+    text-align: center;
+}
+
+ /*
+.car-sect .img-card-sect .txt-wrap .txt-box.on:before {
+    opacity: 1;
+}
+*/
+
+/*
+.car-sect .img-card-sect .txt-wrap .txt-box.left:before {
+    left: 0;
+}
+*/
+
+/*
+.car-sect .img-card-sect .txt-wrap .txt-box:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.4);
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+*/
+
+.car-sect .img-card-sect .txt-wrap .txt-box .en-tit {
+    font-size: 3.5rem;
+    z-index: 3;
+    position: relative;
+}
+
+.en {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.car-sect .img-card-sect .txt-wrap .txt-box .tit {
+    font-size: 7rem;
+    font-weight: 700;
+    margin-top: 4rem;
+    z-index: 3;
+    position: relative;
+}
+
+.car-sect .img-card-sect .txt-wrap .txt-box .txt {
+    font-size: 16px;
+    margin-top: 1rem;
+    z-index: 3;
+    position: relative;
+}
+
+.sm-mo-only {
+    display: none !important;  /* !important는 우선순위를 가장 높게 설정하여, 다른 CSS 규칙들이 덮어쓰지 못하도록 강제함! */
+}
+
+.car-sect .img-card-sect .txt-wrap .txt-box.on .view-btn {
+    opacity: 1;
+    pointer-events: visible;
+}
+
+.car-sect .img-card-sect .txt-wrap .txt-box .view-btn {
+    position: absolute;
+    left: 50%;
+    bottom: -10rem;
+    transform: translate(-50%,100%);
+    opacity: 0;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.view-btn.wh {
+    border-color: #fff;
+}
+
+.view-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 17rem;
+    min-width: 120px;
+    height: 5rem;
+    padding: 0px 1em;
+    border: 1px solid #000;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.view-btn.wh .ico {
+    background-color: #fff;
+}
+
+.view-btn .ico {
+    margin-right: 15px;
+    width: 1.3rem;
+    height: 2px;
+    background-color: #000;
+    transform: rotate(360deg);
+    transition: 0.3s ease-in-out;
+}
+
+.car-sect .img-card-sect .txt-wrap .plus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 3;
+    width: 4rem;
+}
+
+.car-sect .img-card-sect .txt-wrap .plus svg {
+    fill: #fff;
+}
+
+svg {
+    overflow: visible;
+}
+
+.car-sect .img-card-sect .txt-wrap .txt-box.right {
+    right: 0;
+}
+
+.car-sect .img-card-sect .txt-wrap .txt-box.right::before {
+    right: 0;
+}
+
+.car-sect .img-card-sect .txt-wrap .txt-box.right:before {
+    right: 0;
+}
+

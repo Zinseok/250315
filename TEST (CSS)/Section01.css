@@ -1,0 +1,315 @@
+/************** Section01 **************/
+
+.page-wrap {
+    display: flex;
+    flex-direction: column;  /* Flexbox에서 아이템의 배치 방향을 세로(위→아래)로 설정하는 속성 */
+    min-height: 100vh;
+}
+
+.pagr-wrap .container {
+    flex: 1;
+    flex-grow: 1;  /* 컨테이너에서 남은 공간을 아이템들이 어떻게 나눠 가질지 결정하는 속성 */
+    flex-shrink: 1;  /* Flex 컨테이너 안에서 아이템이 줄어들 때, 얼마나 줄어들 수 있는지를 결정 */
+    flex-basis: 0%;  /* Flexbox에서 아이템의 기본 크기를 0으로 설정하는 속성 */
+}
+
+.video-sect {
+    position: relative;
+    width: 100%;
+    background-color: #000;
+    margin-top: -2px;
+    z-index: 55;
+    overflow: hidden;
+}
+
+.swiper-container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+}
+
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+}
+
+.video-sect .swiper-slide {
+    height: calc(4px + 100vh);  /* 브라우저의 화면 높이(100vh)에 4픽셀을 더한 높이를 의미함 */
+}
+
+.swiper-slide-fade .swiper-slide {
+    pointer-events: none;
+    transition-property: opacity;  /* CSS에서 어떤 속성에 대해 트랜지션(변화 효과) 을 적용할지를 지정하는 코드 opacity : 값이 변할 때 부드럽게 변화하도록 설정 */
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition-property: transform;  /* transform : 속성이 변경될 때 부드러운 애니메이션 효과를 적용 */
+}
+
+.video-sect .video-txt {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: 2;
+}
+
+.video-sect .video-txt .in {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  /* 교차 축(Cross Axis) 방향으로 왼쪽 정렬하는 속성 */
+    justify-content: center;
+    height: 100%;
+}
+
+.video-sect .video-txt .tit {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.video-sect .video-txt p {
+    overflow: hidden;
+}
+
+.video-sect .video-txt p span {
+    transform: translateY(100%);
+    display: block;
+    transition: transform 1s ease-in-out;
+}
+
+.video-sect .video-txt .txt {
+    font-size: 40px;
+    font-weight: 500;
+    margin-top: 4rem;
+}
+
+.video-sect .img {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+}
+
+.video-sect .img video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.video-sect .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.video-sect .slide-move {
+    position: absolute;
+    width: 100%;
+    bottom: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 20;
+    color: rgb(255, 255, 255);
+    max-width: 100%;
+}
+
+.video-sect .slide-move .swiper-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+    position: static;
+}
+
+.swiper-pagination {
+    position: absolute;
+    text-align: center;
+    transition: .3s opacity;
+    transform: translate3d(0, 0, 0);
+    z-index: 10;
+}
+
+.swiper-pagination-fraction {
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+}
+
+.video-sect .swiper-progress-bar {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 30rem;
+    height: 2px;
+}
+
+.video-sect .swiper-progress-bar .slide-progress-bar .bg {
+    opacity: 0.2;
+    background: rgb(255, 255, 255);
+}
+
+.video-sect .swiper-progress-bar.animate .slide-progress-bar.loading {
+    left: 0px;
+    right: auto;
+    height: 100%;
+    width: 0px;
+    background: rgb(255, 255, 255);
+    transition: width linear 0.1s;
+}
+
+.video-sect .slide-move .swiper-pagination .num-box {
+    font-size: 16px;
+    width: 4em;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: 20px;
+}
+
+.video-sect .slide-move .swiper-pagination-current {
+    min-width: 0.7em;
+}
+
+.video-sect .slide-move .swiper-pagination .num-box span {
+    line-height: 1;
+}
+
+.video-sect .slide-move .swiper-pagination .num-box .slash {
+    font-weight: 300;
+    font-size: 1.8rem;
+    opacity: 0.6;
+    margin: 0px 7px;
+}
+
+.video-sect .slide-move .swiper-pagination .num-box .swiper-pagination-total {
+    opacity: 0.6;
+}
+
+.video-sect .slide-move .swiper-pagination .btn {
+    width: 16px;
+    height: 16px;
+    margin-left: 20px;
+    display: inline-block;
+    position: relative;
+}
+
+.video-sect .slide-move .swiper-pagination .btn svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1rem;
+    fill: rgb(255, 255, 255);
+}
+
+g {
+    transform: translate(-192, -1560.13);
+}
+
+svg {
+    overflow: visible;
+}
+
+.video-sect .slide-move .swiper-pagination .btn svg.play {
+    display: none;
+}
+
+.video-sect .slide-move .swiper-pagination .btn svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1rem;
+    fill: rgb(255, 255, 255);
+}
+
+svg {
+    overflow: visible;
+}
+
+.video-sect .slide-move .arr {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 13px;
+    fill: rgb(255, 255, 255);
+    z-index: 10;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.video-sect .slide-move .arr .swiper-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 6rem;
+}
+
+.video-sect .slide-move .arr .swiper-btn svg .cls-2 {
+    fill: none;
+    stroke: rgb(255, 255, 255);
+    stroke-miterlimit: 10;
+    stroke-width: 10px;
+    transition: stroke 0.3s;
+}
+
+.video-sect .slide-move .arr .swiper-btn + .swiper-btn {
+    margin-left: 13px;
+}
+
+.scroll-animation {
+    position: absolute;
+    bottom: 0px;
+    right: 10rem;
+    height: 180px;
+    color: rgb(255, 255, 255);
+    z-index: 70;
+    transform: translateX(-50%);
+}
+
+.scroll-animation > span {
+    display: block;
+    transform: rotate(90deg);
+    font-size: 14px;
+}
+
+.scroll-animation > .bg {
+    position: relative;
+    height: 100%;
+    width: 1px;
+    margin: 30px auto 0px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.scroll-animation > .bg .animation {
+    width: 100%;
+    animation-name: updown;
+    animation-iteration-count: infinite;  /* CSS에서 애니메이션을 무한 반복하도록 설정하는 속성 */
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    background: rgb(255, 255, 255);
+}

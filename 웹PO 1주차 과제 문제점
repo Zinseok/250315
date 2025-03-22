@@ -1,0 +1,32 @@
+웹 1st PO (1주차 문제점)
+
+[ Header ]
+
+없음
+
+
+[ Section01 ]
+
+1.Section1 동영상 재생이 안 됨.
+
+
+[ Section02 ]
+
+1..info-sect .cont-box .cont .box .desc 텍스트 구현이 안 됨.
+
+[ Section03 ]
+
+1..scene-sect type2 .scene-cont 배경 및 텍스트 구현이 안 됨.
+*시계 부분 미구현
+
+비고:
+
+기존 감각, 역동 내용을 품격, 역동으로 변경함. (변경사유 : 자료 정리하는 과정에 내용이 겹치는 부분이 많아 변경함)
+참고자료 : https://www.rangerover.com/ko-kr/range-rover/explore.html
+
+[ Section04 ]
+
+1. .banner-sect .in 구현 안 됨.
+2..view-btn 구현 안 됨
+
+[ Section05 ]
